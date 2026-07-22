@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: rgb(2 6 23);
+    color: rgb(255 255 255);
+  }
+
+  ::selection {
+    background-color: rgba(34, 211, 238, 0.3);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(2 6 23);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(30 41 59);
+    border-radius: 9999px;
+    border: 2px solid rgb(2 6 23);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(51 65 85);
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+  }
+
+  .fade-grid {
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 40%, transparent 100%);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
