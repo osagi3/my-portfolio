@@ -4,19 +4,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Reveal, { staggerContainer, staggerItem } from './Reveal';
 
-// TODO: edit this list to match your actual stack
 const skillGroups = [
   {
     category: 'Frontend',
-    skills: ['React', 'Next.js', 'Tailwind CSS', 'Redux'],
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
   },
   {
-    category: 'Backend',
-    skills: ['Node.js', 'Express', 'REST APIs', 'PostgreSQL'],
+    category: 'Architecture',
+    skills: ['Reusable Components', 'Responsive UI', 'Accessibility', 'API Integration', 'State Management'],
+  },
+  {
+    category: 'Data and Realtime',
+    skills: ['Server-Sent Events (SSE)', 'SignalR', 'Dashboards', 'Data Visualization', 'Large Dataset Handling'],
   },
   {
     category: 'Tools',
-    skills: ['Git', 'Figma', 'Vercel', 'Docker'],
+    skills: ['Git', 'GitHub', 'Agile Collaboration', 'Performance Optimization'],
   },
 ];
 
@@ -34,10 +37,14 @@ export default function Skills() {
               work with
             </span>
           </h2>
+          <p className="mt-6 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            My day-to-day stack focuses on modern frontend engineering, scalable UI systems,
+            and real-time product experiences.
+          </p>
         </Reveal>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"

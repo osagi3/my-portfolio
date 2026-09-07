@@ -2,15 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, MessageCircle } from 'lucide-react';
+import { Mail, Github, MapPin, GraduationCap, Linkedin, MessageCircle } from 'lucide-react';
 import Reveal, { staggerContainer, staggerItem } from './Reveal';
 
-// TODO: replace with your real WhatsApp number (country code, no spaces or symbols)
 const contactLinks = [
-  { icon: Mail, label: 'Email', value: 'you@example.com', href: 'mailto:you@example.com' },
-  { icon: Github, label: 'GitHub', value: '@your-username', href: 'https://github.com/your-username' },
-  { icon: Linkedin, label: 'LinkedIn', value: '/in/your-username', href: 'https://linkedin.com/in/your-username' },
-  { icon: MessageCircle, label: 'WhatsApp', value: '+1 234 567 890', href: 'https://wa.me/1234567890' },
+  { icon: Mail, label: 'Email', value: 'Losagie555@gmail.com', href: 'mailto:Losagie555@gmail.com' },
+  { icon: Github, label: 'GitHub', value: 'github.com/osagi3', href: 'https://github.com/osagi3' },
+  { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/your-linkedin-handle', href: 'https://linkedin.com/in/your-linkedin-handle' },
+  { icon: MessageCircle, label: 'WhatsApp', value: '+2340000000000', href: 'https://wa.me/2340000000000' },
+  { icon: MapPin, label: 'Location', value: 'Lagos, Nigeria', href: '#' },
+  { icon: GraduationCap, label: 'Education', value: 'B.Sc. Mass Communication', href: '#' },
 ];
 
 export default function Contact() {
@@ -28,12 +29,13 @@ export default function Contact() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 mb-12 max-w-xl mx-auto leading-relaxed">
-            I&apos;m open to new roles and freelance projects. Feel free to reach out — I usually
-            reply within a day or two.
+            I&apos;m open to frontend roles, contract work, and product collaborations. If you
+            need someone who can turn product requirements into clean, scalable interfaces,
+            let&apos;s talk.
           </p>
 
           <motion.a
-            href="mailto:you@example.com"
+            href="mailto:Losagie555@gmail.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-cyan-600 to-emerald-600 rounded-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-shadow mb-12"
@@ -44,28 +46,46 @@ export default function Contact() {
         </Reveal>
 
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4"
+          className="grid grid-cols-2 sm:grid-cols-3 gap-4"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           {contactLinks.map(({ icon: Icon, label, value, href }) => (
-            <motion.a
-              key={label}
-              href={href}
-              target={href.startsWith('http') ? '_blank' : undefined}
-              rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              variants={staggerItem}
-              whileHover={{ y: -4 }}
-              className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-800 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-colors"
-            >
-              <Icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
-              <span className="text-xs text-slate-500">{label}</span>
-              <span className="text-sm text-slate-300 truncate max-w-full">{value}</span>
-            </motion.a>
+            href === '#' ? (
+              <motion.div
+                key={label}
+                variants={staggerItem}
+                whileHover={{ y: -4 }}
+                className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-800 bg-slate-900/40 transition-colors"
+              >
+                <Icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                <span className="text-xs text-slate-500">{label}</span>
+                <span className="text-sm text-slate-300 truncate max-w-full">{value}</span>
+              </motion.div>
+            ) : (
+              <motion.a
+                key={label}
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                variants={staggerItem}
+                whileHover={{ y: -4 }}
+                className="group flex flex-col items-center gap-2 p-4 rounded-xl border border-slate-800 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-colors"
+              >
+                <Icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                <span className="text-xs text-slate-500">{label}</span>
+                <span className="text-sm text-slate-300 truncate max-w-full">{value}</span>
+              </motion.a>
+            )
           ))}
         </motion.div>
+
+        <Reveal y={12} className="mt-8 rounded-2xl border border-amber-500/20 bg-amber-500/5 px-5 py-4 text-sm text-amber-200">
+          Dummy LinkedIn and WhatsApp placeholders have been added here. Replace them with
+          your real contact links when ready.
+        </Reveal>
       </div>
     </section>
   );

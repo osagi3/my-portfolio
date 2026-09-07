@@ -8,18 +8,18 @@ import Reveal, { staggerContainer, staggerItem } from './Reveal';
 const highlights = [
   {
     icon: Code2,
-    title: 'Clean Code',
-    description: 'I write maintainable, well-structured code that scales with the product.',
+    title: 'Scalable Frontends',
+    description: 'I build structured component systems and production-ready interfaces that can grow with the product.',
   },
   {
     icon: Palette,
-    title: 'Design Sense',
-    description: 'I care about the details — spacing, motion, and interaction that feel right.',
+    title: 'Intentional UX',
+    description: 'I care about smooth interactions, responsive layouts, and accessible experiences that feel polished.',
   },
   {
     icon: Zap,
-    title: 'Performance',
-    description: 'Fast load times and smooth interactions are non-negotiable in what I build.',
+    title: 'Product Performance',
+    description: 'From API integrations to large datasets and real-time updates, I optimize for speed and reliability.',
   },
 ];
 
@@ -38,11 +38,35 @@ export default function About() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            {/* TODO: replace with your real bio */}
-            I&apos;m a frontend developer who enjoys turning ideas into interfaces people
-            actually like using. I&apos;ve worked across web and mobile projects, and I like
-            being close to both the design and the code that brings it to life.
+            I&apos;m Wisdom Lucky, a results-driven frontend developer with over three years
+            of experience building web applications that are scalable, intuitive, and
+            accessible. I enjoy turning product ideas into interfaces that feel clear for
+            users and dependable for teams shipping them.
           </p>
+        </Reveal>
+
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-6 mb-10">
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8 backdrop-blur-sm">
+            <p className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-4">
+              Professional Summary
+            </p>
+            <p className="text-slate-300 leading-8">
+              My work centers on React, Next.js, modern JavaScript, and TypeScript. I build
+              fast, accessible product experiences, integrate APIs cleanly, and collaborate
+              well inside agile teams to deliver production-ready software. Most recently, I
+              led frontend implementation for a global healthcare platform, owning the build
+              from component architecture through deployment.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8 backdrop-blur-sm">
+            <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wide mb-4">
+              Education
+            </p>
+            <h3 className="text-xl font-semibold text-white mb-2">National Open University of Nigeria</h3>
+            <p className="text-slate-300">B.Sc. Mass Communication (Film Production)</p>
+            <p className="text-slate-500 mt-2">Lagos, Nigeria • September 2024</p>
+          </div>
         </Reveal>
 
         <motion.div

@@ -41,14 +41,14 @@ export default function Navbar({ scrollToSection }: NavbarProps) {
             <div className="relative">
               <div className="absolute inset-0 bg-linear-to-br from-cyan-500 to-emerald-500 rounded-xl blur-sm group-hover:blur-md transition-all" />
               <div className="relative w-12 h-12 bg-linear-to-br from-cyan-600 to-emerald-600 rounded-xl flex items-center justify-center font-bold text-xl transform group-hover:scale-110 transition-transform">
-                YN
+                WL
               </div>
             </div>
             <div className="text-left">
               <div className="text-xl font-bold bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                Your Name
+                Wisdom Lucky
               </div>
-              <div className="text-xs text-slate-400 -mt-1">Frontend Developer</div>
+              <div className="text-xs text-slate-400 -mt-1">React and Next.js Developer</div>
             </div>
           </button>
 

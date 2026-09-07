@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ArrowRight, Github, Mail, Download, Linkedin } from 'lucide-react';
 
 interface HeroProps {
   scrollToSection: (id: string) => void;
@@ -21,6 +21,13 @@ const item: Variants = {
 };
 
 export default function Hero({ scrollToSection }: HeroProps) {
+  const links = [
+    { icon: Github, href: 'https://github.com/osagi3', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/your-linkedin-handle', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:Losagie555@gmail.com', label: 'Email' },
+    { icon: Download, href: '/resume.pdf', label: 'Resume' },
+  ];
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-20">
       {/* Floating elements */}
@@ -47,7 +54,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           className="inline-flex items-center space-x-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-8 backdrop-blur-sm"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-sm text-cyan-300">Available for new opportunities</span>
+          <span className="text-sm text-cyan-300">Open to frontend roles and product collaborations</span>
         </motion.div>
 
         {/* Main heading */}
@@ -59,7 +66,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             variants={item}
             className="block bg-linear-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent animate-gradient"
           >
-            Your Name
+            Wisdom Lucky
           </motion.span>
           <motion.span
             variants={item}
@@ -69,10 +76,30 @@ export default function Hero({ scrollToSection }: HeroProps) {
           </motion.span>
         </h1>
 
-        <motion.p variants={item} className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-          I build clean, fast, and accessible web experiences — from pixel-perfect
-          interfaces to the systems that power them.
+        <motion.p variants={item} className="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+          I build high-performance, scalable web applications with React, Next.js, and
+          TypeScript, focusing on intuitive user interfaces, API integrations, and
+          accessible product experiences that are ready for production.
         </motion.p>
+
+        <motion.div
+          variants={item}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto text-left"
+        >
+          {[
+            { value: '3+', label: 'Years building frontend products' },
+            { value: 'React', label: 'Modern UI architecture and reusable components' },
+            { value: 'Real-time', label: 'SSE, SignalR, dashboards, and live data flows' },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-2xl border border-slate-800 bg-slate-900/50 px-5 py-4 backdrop-blur-sm"
+            >
+              <p className="text-2xl font-bold text-white">{stat.value}</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-400">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -98,12 +125,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
 
         {/* Social links */}
         <motion.div variants={item} className="flex items-center justify-center gap-4">
-          {[
-            { icon: Github, href: 'https://github.com/your-username', label: 'GitHub' },
-            { icon: Linkedin, href: 'https://linkedin.com/in/your-username', label: 'LinkedIn' },
-            { icon: Mail, href: 'mailto:you@example.com', label: 'Email' },
-            { icon: Download, href: '/resume.pdf', label: 'Resume' },
-          ].map(({ icon: Icon, href, label }) => (
+          {links.map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}
               href={href}
@@ -118,6 +140,10 @@ export default function Hero({ scrollToSection }: HeroProps) {
             </motion.a>
           ))}
         </motion.div>
+
+        <motion.p variants={item} className="mt-5 text-sm text-amber-300/90">
+          Replace the dummy LinkedIn URL with your real profile before publishing.
+        </motion.p>
       </motion.div>
 
       {/* Scroll indicator */}

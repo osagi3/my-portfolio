@@ -16,32 +16,36 @@ interface Project {
   liveUrl?: string;
   repoUrl?: string;
   image?: string;
+  note?: string;
 }
 
 const projects: Project[] = [
   {
-    title: 'Project One',
+    title: 'GHRI Healthcare Platform',
     description:
-      'Replace this with a short description of what the project does and the problem it solves.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    liveUrl: '#',
-    repoUrl: '#',
+      'Built the complete frontend UI and core functionality for a global healthcare platform focused on improving healthcare access, consultations, and community engagement.',
+    tags: ['React', 'Next.js', 'Accessible UI', 'Component Architecture'],
+    liveUrl: 'https://example.com/ghri-demo',
+    repoUrl: 'https://github.com/osagi3/ghri-placeholder',
+    note: 'Dummy demo and code links added. Replace with the real GHRI URLs or remove them.',
   },
   {
-    title: 'Project Two',
+    title: 'AlphaStock Real-Time Investment Community',
     description:
-      'Replace this with a short description of what the project does and the problem it solves.',
-    tags: ['React', 'Node.js', 'PostgreSQL'],
-    liveUrl: '#',
-    repoUrl: '#',
+      'Developed a live investment community experience with real-time stock updates, multi-community chat, and monetization-focused flows for subscription products.',
+    tags: ['React', 'SSE', 'SignalR', 'Realtime UX'],
+    liveUrl: 'https://example.com/alphastock-demo',
+    repoUrl: 'https://github.com/osagi3/alphastock-placeholder',
+    note: 'Dummy demo and code links added. Replace with the real AlphaStock URLs or remove them.',
   },
   {
-    title: 'Project Three',
+    title: 'BioNafitha Healthcare E-Commerce Platform',
     description:
-      'Replace this with a short description of what the project does and the problem it solves.',
-    tags: ['React Native', 'Firebase'],
-    liveUrl: '#',
-    repoUrl: '#',
+      'Engineered an admin dashboard with inventory visibility, sales analytics, reusable data modules, and efficient state handling for high-volume product management.',
+    tags: ['Dashboard UI', 'Data Visualization', 'Payments', 'Performance'],
+    liveUrl: 'https://example.com/bionafitha-demo',
+    repoUrl: 'https://github.com/osagi3/bionafitha-placeholder',
+    note: 'Dummy demo and code links added. Replace with the real BioNafitha URLs or remove them.',
   },
 ];
 
@@ -60,8 +64,8 @@ export default function Projects() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            A selection of projects. Edit the <code className="text-cyan-400">projects</code> array
-            in <code className="text-cyan-400">app/components/Projects.tsx</code> to add your own.
+            A selection of product work spanning healthcare, fintech, and commerce, with a
+            focus on real-world UX, frontend architecture, and performance.
           </p>
         </Reveal>
 
@@ -77,7 +81,7 @@ export default function Projects() {
               key={project.title}
               variants={staggerItem}
               whileHover={{ y: -6 }}
-              className="group flex flex-col rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 backdrop-blur-sm overflow-hidden transition-colors"
+              className="group flex flex-col rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-950/40 backdrop-blur-sm overflow-hidden transition-all"
             >
               {/* Preview */}
               <div className="relative h-44 overflow-hidden">
@@ -89,8 +93,10 @@ export default function Projects() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
-                  <div className="w-full h-full bg-linear-to-br from-cyan-600/30 via-slate-800 to-emerald-600/30 flex items-center justify-center">
-                    <span className="text-slate-500 text-sm">Preview image</span>
+                  <div className="w-full h-full bg-linear-to-br from-cyan-600/30 via-slate-900 to-emerald-600/30 flex items-end justify-start p-6">
+                    <span className="text-slate-200 text-sm font-medium rounded-full border border-white/10 bg-slate-950/60 px-3 py-1 backdrop-blur-sm">
+                      Case Study
+                    </span>
                   </div>
                 )}
               </div>
@@ -101,6 +107,12 @@ export default function Projects() {
                 <p className="text-slate-400 text-sm leading-relaxed mb-4 flex-1">
                   {project.description}
                 </p>
+
+                {project.note && (
+                  <p className="mb-4 rounded-xl border border-amber-500/20 bg-amber-500/5 px-3 py-2 text-xs leading-relaxed text-amber-200">
+                    {project.note}
+                  </p>
+                )}
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag) => (
