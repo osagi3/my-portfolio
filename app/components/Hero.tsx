@@ -33,7 +33,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:Losagie555@gmail.com", label: "Email" },
-    { icon: Download, href: "/resume.pdf.docx", label: "Resume" },
+    { icon: Download, href: "/Resume_fp.pdf", label: "Resume" },
   ];
 
   return (
