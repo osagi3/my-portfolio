@@ -87,7 +87,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             variants={item}
             className="block bg-linear-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent animate-gradient"
           >
-            Wisdom Lucky
+            Wisdom Kelvin Lucky
           </motion.span>
           <motion.span
             variants={item}
