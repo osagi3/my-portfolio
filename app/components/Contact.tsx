@@ -42,7 +42,7 @@ const contactLinks = [
   {
     icon: GraduationCap,
     label: "Education",
-    value: "B.Sc. Mass Communication",
+    value: "B.Sc. Film Production",
     href: "#",
   },
 ];
