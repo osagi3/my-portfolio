@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
-import Reveal, { staggerContainer, staggerItem } from './Reveal';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import Reveal, { staggerContainer, staggerItem } from "./Reveal";
 
 // ---------------------------------------------------------------------------
 // Add your projects here. Each entry renders as one card below.
@@ -21,31 +21,36 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'GHRI Healthcare Platform',
+    title: "GHRI Healthcare Platform",
     description:
-      'Built the complete frontend UI and core functionality for a global healthcare platform focused on improving healthcare access, consultations, and community engagement.',
-    tags: ['React', 'Next.js', 'Accessible UI', 'Component Architecture'],
-    liveUrl: 'https://example.com/ghri-demo',
-    repoUrl: 'https://github.com/osagi3/ghri-placeholder',
-    note: 'Dummy demo and code links added. Replace with the real GHRI URLs or remove them.',
+      "Built the complete frontend UI and core functionality for a global healthcare platform focused on improving healthcare access, consultations, and community engagement.",
+    tags: ["React", "Next.js", "Accessible UI", "Component Architecture"],
+    liveUrl: "https://example.com/ghri-demo",
+    repoUrl: "https://github.com/osagi3/ghri-placeholder",
   },
   {
-    title: 'AlphaStock Real-Time Investment Community',
+    title: "AlphaStock Real-Time Investment Community",
     description:
-      'Developed a live investment community experience with real-time stock updates, multi-community chat, and monetization-focused flows for subscription products.',
-    tags: ['React', 'SSE', 'SignalR', 'Realtime UX'],
-    liveUrl: 'https://example.com/alphastock-demo',
-    repoUrl: 'https://github.com/osagi3/alphastock-placeholder',
-    note: 'Dummy demo and code links added. Replace with the real AlphaStock URLs or remove them.',
+      "Developed a live investment community experience with real-time stock updates, multi-community chat, and monetization-focused flows for subscription products.",
+    tags: ["React", "SSE", "SignalR", "Realtime UX"],
+    liveUrl: "https://example.com/alphastock-demo",
+    repoUrl: "https://github.com/osagi3/alphastock-placeholder",
   },
   {
-    title: 'BioNafitha Healthcare E-Commerce Platform',
+    title: "BioNafitha Healthcare E-Commerce Platform",
     description:
-      'Engineered an admin dashboard with inventory visibility, sales analytics, reusable data modules, and efficient state handling for high-volume product management.',
-    tags: ['Dashboard UI', 'Data Visualization', 'Payments', 'Performance'],
-    liveUrl: 'https://example.com/bionafitha-demo',
-    repoUrl: 'https://github.com/osagi3/bionafitha-placeholder',
-    note: 'Dummy demo and code links added. Replace with the real BioNafitha URLs or remove them.',
+      "Engineered an admin dashboard with inventory visibility, sales analytics, reusable data modules, and efficient state handling for high-volume product management.",
+    tags: ["Dashboard UI", "Data Visualization", "Payments", "Performance"],
+    liveUrl: "https://example.com/bionafitha-demo",
+    repoUrl: "https://github.com/osagi3/bionafitha-placeholder",
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "Built a fully responsive e-commerce web application using React, Next.js, JavaScript, and Tailwind CSS.",
+    tags: ["Products data", "Payments", "Performance"],
+    liveUrl: "https://mystore-b2d5.vercel.app",
+    repoUrl: "https://github.com/osagi3/Mystore.git",
   },
 ];
 
@@ -58,14 +63,15 @@ export default function Projects() {
             Projects
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Things I&apos;ve{' '}
+            Things I&apos;ve{" "}
             <span className="bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
               built
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            A selection of product work spanning healthcare, fintech, and commerce, with a
-            focus on real-world UX, frontend architecture, and performance.
+            A selection of product work spanning healthcare, fintech, and
+            commerce, with a focus on real-world UX, frontend architecture, and
+            performance.
           </p>
         </Reveal>
 
