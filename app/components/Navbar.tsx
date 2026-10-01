@@ -47,13 +47,13 @@ export default function Navbar({ scrollToSection }: NavbarProps) {
                   alt="profile piture"
                   width={40}
                   height={30}
-                  className="object-cover rounded-2xl"
+                  className="object-cover rounded-full"
                 />
               </div>
             </div>
             <div className="text-left">
               <div className="text-xl font-bold bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-                Wisdom Lucky
+                Wisdom Kelvin Lucky
               </div>
               <div className="text-xs text-slate-400 -mt-1">
                 React and Next.js Developer
