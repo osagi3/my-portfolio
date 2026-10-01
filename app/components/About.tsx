@@ -41,11 +41,11 @@ export default function About() {
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            I&apos;m Wisdom Lucky, a results-driven frontend developer with over
-            three years of experience building web applications that are
-            scalable, intuitive, and accessible. I enjoy turning product ideas
-            into interfaces that feel clear for users and dependable for teams
-            shipping them.
+            I&apos;m Wisdom Kelvin Lucky, a results-driven frontend developer
+            with over three years of experience building web applications that
+            are scalable, intuitive, and accessible. I enjoy turning product
+            ideas into interfaces that feel clear for users and dependable for
+            teams shipping them.
           </p>
         </Reveal>
 
