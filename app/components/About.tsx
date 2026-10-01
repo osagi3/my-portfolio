@@ -1,25 +1,28 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code2, Palette, Zap } from 'lucide-react';
-import Reveal, { staggerContainer, staggerItem } from './Reveal';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code2, Palette, Zap } from "lucide-react";
+import Reveal, { staggerContainer, staggerItem } from "./Reveal";
 
 const highlights = [
   {
     icon: Code2,
-    title: 'Scalable Frontends',
-    description: 'I build structured component systems and production-ready interfaces that can grow with the product.',
+    title: "Scalable Frontends",
+    description:
+      "I build structured component systems and production-ready interfaces that can grow with the product.",
   },
   {
     icon: Palette,
-    title: 'Intentional UX',
-    description: 'I care about smooth interactions, responsive layouts, and accessible experiences that feel polished.',
+    title: "Intentional UX",
+    description:
+      "I care about smooth interactions, responsive layouts, and accessible experiences that feel polished.",
   },
   {
     icon: Zap,
-    title: 'Product Performance',
-    description: 'From API integrations to large datasets and real-time updates, I optimize for speed and reliability.',
+    title: "Product Performance",
+    description:
+      "From API integrations to large datasets and real-time updates, I optimize for speed and reliability.",
   },
 ];
 
@@ -32,16 +35,17 @@ export default function About() {
             About Me
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-            A little about{' '}
+            A little about{" "}
             <span className="bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
               who I am
             </span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            I&apos;m Wisdom Lucky, a results-driven frontend developer with over three years
-            of experience building web applications that are scalable, intuitive, and
-            accessible. I enjoy turning product ideas into interfaces that feel clear for
-            users and dependable for teams shipping them.
+            I&apos;m Wisdom Lucky, a results-driven frontend developer with over
+            three years of experience building web applications that are
+            scalable, intuitive, and accessible. I enjoy turning product ideas
+            into interfaces that feel clear for users and dependable for teams
+            shipping them.
           </p>
         </Reveal>
 
@@ -51,10 +55,11 @@ export default function About() {
               Professional Summary
             </p>
             <p className="text-slate-300 leading-8">
-              My work centers on React, Next.js, modern JavaScript, and TypeScript. I build
-              fast, accessible product experiences, integrate APIs cleanly, and collaborate
-              well inside agile teams to deliver production-ready software. Most recently, I
-              led frontend implementation for a global healthcare platform, owning the build
+              My work centers on React, Next.js, modern JavaScript, and
+              TypeScript. I build fast, accessible product experiences,
+              integrate APIs cleanly, and collaborate well inside agile teams to
+              deliver production-ready software. Most recently, I led frontend
+              implementation for a global healthcare platform, owning the build
               from component architecture through deployment.
             </p>
           </div>
@@ -63,9 +68,13 @@ export default function About() {
             <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wide mb-4">
               Education
             </p>
-            <h3 className="text-xl font-semibold text-white mb-2">National Open University of Nigeria</h3>
-            <p className="text-slate-300">B.Sc. Mass Communication (Film Production)</p>
-            <p className="text-slate-500 mt-2">Lagos, Nigeria • September 2024</p>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              National Open University of Nigeria
+            </h3>
+            <p className="text-slate-300">B.Sc. Film Production</p>
+            <p className="text-slate-500 mt-2">
+              Lagos, Nigeria • September 2024
+            </p>
           </div>
         </Reveal>
 
